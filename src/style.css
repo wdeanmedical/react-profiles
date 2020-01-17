@@ -97,3 +97,8 @@ body {
 .sort-by {
   margin-left: 20px;
 }
+
+.timer__bar {
+  height: 10px;
+  background: #4472fb;
+}

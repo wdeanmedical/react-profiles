@@ -42,6 +42,7 @@ class App extends Component {
             key={user.login.uuid}
             user={user}
             updateEmail={(email) => this.updateEmail(user.login.uuid, email)}
+            durationMs={1000}
           />
         )
       })
