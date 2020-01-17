@@ -1,0 +1,99 @@
+h1, p, div, span {
+  font-family: Arial, Helvetica, sans-serif
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-rows: 270px 270px 270px;
+    grid-template-columns: 220px 220px 220px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  width: 200px;
+  margin: 15px;
+  background-color: white;
+  border-radius:5px;
+  overflow: hidden;
+  perspective: 1px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 6px 20px 0 rgba(129, 81, 81, 0.1);
+}
+
+.card-header {
+  background-color: #4472fb;
+  height: 85px;
+}
+
+.edit-icon {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.edit-icon:hover {
+  opacity: 1;
+}
+
+.username {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  text-transform:capitalize;
+}
+
+
+.user-image {
+  height: 80px;
+  width: 80px;
+  border-radius: 80px;
+  align-self: center;
+  margin-top: -33px;
+  margin-bottom: 10px;
+  border-color: white;
+  border-width: 3px;
+  border-style: solid;
+  perspective: 1px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 6px 20px 0 rgba(129, 81, 81, 0.1);
+}
+
+.body-text  {
+  color: #868586;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.city-country {
+  text-transform:capitalize;
+}
+
+.email-text {
+  justify-self: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 4px;
+  padding-left: 5px;
+}
+
+.search-bar input {
+  width: 200px;
+  padding-left: 5px;
+}
+
+.header {
+  display: flex;
+}
+
+.sort-by {
+  margin-left: 20px;
+}
