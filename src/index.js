@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import axios from 'axios';
+import EventListener, {withOptions} from 'react-event-listener';
 import _ from 'lodash';
 import './style.css';
 import Card from './Card';
@@ -76,6 +77,18 @@ class App extends Component {
     this.setState({ filteredUsers })
   }
 
+  handleResize = () => {
+    console.log('resize');
+  };
+
+  handleScroll = () => {
+    console.log('scroll');
+  };
+
+  handleMouseMove = () => {
+    console.log('mousemove');
+  };
+
   render() {
     return (
       <div>
@@ -100,6 +113,12 @@ class App extends Component {
         <div className="cards">
           {this.renderUsers()}
         </div>
+        <EventListener
+            target="window"
+            onResize={this.handleResize}
+            onScroll={withOptions(this.handleScroll, {passive: true, capture: false})}
+        />
+        <EventListener target={document} onMouseMoveCapture={this.handleMouseMove} />
       </div>
     );
   }
